@@ -79,3 +79,16 @@ head(df)
 4 4 0.43      1     A
 5 5 0.36      2     A
 6 6 0.29      2     A
+# Apply ANOVA test to columns time
+anova_one_way <- aov(time~poison, data = df)
+summary(anova_one_way)
+Df Sum Sq Mean Sq F value
+poison       1 0.9316  0.9316   20.67
+Residuals   46 2.0735  0.0451        
+Pr(>F)    
+poison      3.96e-05 ***
+  Residuals               
+---
+  Signif. codes:  
+  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05
+‘.’ 0.1 ‘ ’ 1
